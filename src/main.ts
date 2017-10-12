@@ -8,4 +8,5 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+const promise = platformBrowserDynamic().bootstrapModule(AppModule);
+promise.then(() => console.log('test'));
